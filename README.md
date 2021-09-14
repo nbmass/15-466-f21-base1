@@ -1,22 +1,19 @@
-# (TODO: your game's title)
+# Space Battle
 
-Author: (TODO: your name)
+Author: Nolan Mass
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: Control a small starship and try to shoot the evil flying saucers with your laser before they shoot you.
 
 Screen Shot:
 
 ![Screen Shot](screenshot.png)
 
 How Your Asset Pipeline Works:
-
-(TODO: describe the steps in your asset pipeline, from source files to tiles/backgrounds/whatever you upload to the PPU466.)
+I read in some PNG files in the dist folder and convert them into tiles. I created a function that takes in the tile index and pallette index to load the PNG into. The background tiles are placed randomly (except for the moon) to form a pattern of stars.
 
 How To Play:
+Use arrow keys to move around and press space to shoot. The goal is to shoot all of the flying saucers without getting hit. 
 
-(TODO: describe the controls and (if needed) goals/strategy.)
-
-Sources: (TODO: list a source URL for any assets you did not create yourself. Make sure you have a license for the asset.)
-
+Sources:
 This game was built with [NEST](NEST.md).
 
