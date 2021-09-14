@@ -196,7 +196,7 @@ void PlayMode::update(float elapsed) {
 			if (d < 8) {
 				e.dir = directions[d];
 			}
-			if (!e.fired and (projectiles.size() < 32) and (std::rand() % 2000 < score)) {
+			if ((projectiles.size() < 32) and (std::rand() % 4000 < score)) {
 				projectiles.push_back(Projectile(e.pos.x, e.pos.y, e.dir.x, e.dir.y));
 				projectiles.back().ignore_enemies = true;
 			}
@@ -204,7 +204,7 @@ void PlayMode::update(float elapsed) {
 	}
 
 	//update and delete old projectiles
-	constexpr float ProjectileSpeed = 100.0f;
+	constexpr float ProjectileSpeed = 120.0f;
 	for (auto &p : projectiles) {
 		if (p.pos.x < 0 or p.pos.x >= 255 or p.pos.y < 0 or p.pos.y >= 239) {
 			projectiles.pop_front();

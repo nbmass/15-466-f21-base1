@@ -45,7 +45,6 @@ struct PlayMode : Mode {
 	struct Character {
 		glm::vec2 pos;
 		glm::vec2 dir;
-		bool fired = false;
 		bool is_alive = true;
 	};
 	std::vector<Character> enemies = std::vector<Character>(32);
